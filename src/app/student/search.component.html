@@ -1,0 +1,27 @@
+<p>search works!</p>
+<div class="container">
+    <h1>Search student by Name</h1>
+    <form #userForm="ngForm" (ngSubmit)="searchStudent(userForm.value)">
+    <div class="form-group">
+        <label>student Name</label>
+        <input type="text" class="form-control" name="name" ngModel />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<table class="table table-default table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Gender</td>
+        <td>Age</td>
+        <td>Mobile</td>
+    </tr>
+    <tr *ngFor='let std of students'>
+            <td>{{std.id}}</td>
+            <td>{{std.name}}</td>
+            <td>{{std.gender}}</td>
+            <td>{{std.age}}</td>
+            <td>{{std.mobile}}</td>
+        </tr>
+</table>
+</div>

@@ -1,0 +1,20 @@
+<p>studentlist works!</p>
+<h1>Studnets Details</h1>
+<table class="table table-boardered">
+    <tr>
+        <th>Studnet ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Mobile</th>
+
+    </tr>
+    <tr *ngFor="let student of students;let i = index">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.mobile}}</td>
+            <td><button class="btn btn-primary" (click)='onClick(student.id=i)'>Delete</button></td>
+
+    </tr>
+
+</table>
